@@ -1,0 +1,10 @@
+{
+	"authors": [
+		"HaxoTF"
+	],
+	"copyright": "Copyright © 2025, HaxoTF",
+	"description": "Simple toolbox for dlang",
+	"license": "GPL-3.0-or-later",
+	"name": "htfbox",
+	"targetType": "library"
+}
