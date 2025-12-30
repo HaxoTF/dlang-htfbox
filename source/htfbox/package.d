@@ -1,4 +1,4 @@
 module htfbox;
 
 public import htfbox.logger;
-public import htfbox.configman;
+public import htfbox.config;
