@@ -1,4 +1,4 @@
-module htfbox.configman;
+module htfbox.config;
 
 import path = std.path;
 import std.process;
