@@ -1,4 +1,6 @@
 module htfbox;
 
 public import htfbox.logger;
-public import htfbox.config;
+public import htfbox.vector;
+public import htfbox.math;
+public import htfbox.system;

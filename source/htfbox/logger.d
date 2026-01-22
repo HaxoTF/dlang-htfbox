@@ -14,29 +14,31 @@ public enum LogType {
     OK
 }
 
-// easier to access them
-public Logger[string] LOGGERS;
-
 class Logger
 {
+    // this way it's easier to manage them
     static Logger[string] list;
+
     string log_path = "";
+
+    bool mute_file = false;
+    bool mute_console = false;
     
     static this()
     {
         list = new Logger[string];
     }
 
-    this(string log_path="log.log")
+    this(string log_path)
     {
-        if (file.exists(log_path))
-        {
+        // make sure the file is empty
+        if (file.exists(log_path)) {
             file.write(log_path, "");
         }
 
+        // make sure that parent folder exists
         string log_root = path.dirName(log_path);
-        if (log_root != ".")
-        {
+        if (log_root != ".") {
             file.mkdirRecurse(log_root);
         }
 
@@ -45,26 +47,35 @@ class Logger
 
     void send(string msg, LogType logtype=LogType.INFO)
     {
+        // do nothing if everything is muted
+        // why use logger at all at this point???
+        if (mute_console && mute_file) return;
+
         string ind; // indicator (like "[ LOG ]" for example)
         string clr; // color (ANSI escape code)
 
+        // apply stuff for specific log type
         switch (logtype)
         {
+            // INFO
             case LogType.INFO: // INFO
                 ind = " [ INFO  ] ";
                 clr = "";
                 break;
             
+            // WARN
             case LogType.WARN: // WARN
                 ind = " [ WARN  ] ";
                 clr = "\033[33m";
                 break;
             
+            // ERROR
             case LogType.ERROR: // ERROR
                 ind = " [ ERROR ] ";
                 clr = "\033[31m";
                 break;
             
+            // OK
             case LogType.OK: // OK
                 ind = " [ OK    ] ";
                 clr = "\033[32m";
@@ -73,10 +84,18 @@ class Logger
             default: break;
         }
 
+        // form full message
         string full_msg = get_time_prefix() ~ ind ~ msg;
 
-        file.append(log_path, full_msg ~ "\n");
-        writeln(clr ~ full_msg ~ "\033[0m");
+        // log to file - if not muted
+        if (!mute_file) {
+            file.append(log_path, full_msg ~ "\n");
+        }
+
+        // log to console - if not muted
+        if (!mute_console) {
+            writeln(clr ~ full_msg ~ "\033[0m");
+        }
     }
 
     static string get_time_prefix()
