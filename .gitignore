@@ -16,3 +16,4 @@ htfbox-test-*
 *.lst
 source/test.d
 logs/
+libhtfbox.a
