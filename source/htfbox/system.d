@@ -43,7 +43,7 @@ string get_config_path(T...)(T paths)
     return result;
 }
 
-/// How the current user is called?
+/// How the current user is called?w
 string get_username()
 {
     string result = "";

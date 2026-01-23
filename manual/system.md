@@ -1,10 +1,10 @@
-# System.d
+# 📘 System.d
 
 A toolbox that let's you do stuff with the system without writing any additional instructions for every operating system your program is meant to run on.
 
 
 
-## Functions
+# ⚙️ Functions
 
 
 ### `string get_home_path(T...)(T paths)`
