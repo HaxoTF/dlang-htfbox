@@ -36,13 +36,15 @@ class Logger
             file.write(log_path, "");
         }
 
-        // make sure that parent folder exists
+        this.log_path = log_path;
+    }
+
+    void auto_mkdir_root()
+    {
         string log_root = path.dirName(log_path);
         if (log_root != ".") {
             file.mkdirRecurse(log_root);
         }
-
-        this.log_path = log_path;
     }
 
     void send(string msg, LogType logtype=LogType.INFO)
@@ -89,6 +91,7 @@ class Logger
 
         // log to file - if not muted
         if (!mute_file) {
+            auto_mkdir_root();
             file.append(log_path, full_msg ~ "\n");
         }
 

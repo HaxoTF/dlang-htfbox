@@ -1,5 +1,7 @@
 # 📘 Rapid.d
 
+[Go back](../README.md)
+
 A double linked list meant for operations in which you need to frequently add and remove values from a well... list. If that's what you aim for it should be great alternative to arrays that are slow/laggy at this type of stuff (seriously don't use arrays for that). Great for if you plan for example to make a game in which enemies spawn and despawn like crazy.
 
 I called it "Rapid", cause rapid add/removal, get it?
