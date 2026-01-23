@@ -1,6 +1,6 @@
 module htfbox.yanderedev;
 
-// It's here for as a joke
+// It's here as a joke
 // WARNING: Importing this module will shrink your pp
 
 bool is_even(int v)
@@ -76,4 +76,4 @@ bool is_even(int v)
     if (v==68) return true;
     if (v==69) return false;
     return false; // idk
-}
+} 
