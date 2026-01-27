@@ -21,4 +21,4 @@ For personal use: I don't care do whatever, just have fun man.
 > ⚠️ **Note:**
     As you might notice older version of that library has *"GPL"* not *"LGPL"* in `dub.json` file The difference is GPL requires you to open-source your project regardless. It was a missclick because of my muscle memory and it actually was meant to be LGPL.
 
-Don't worry I won't sue you regardless of what you do. I am chill guy and have no time nor will for law bs neither care what's happening in your basement. All I really hope for is that this project will help you someday, in return I expect your to respect what I made. Have nice day man.
+Don't worry I won't sue you regardless of what you do. I am chill guy and have no time nor will for law bs neither care what's happening in your basement. Let's unite, not murder each other with court. All I really hope for is that this project will help you someday, in return I expect you to respect conditions I've set. Have nice day man.
