@@ -1,4 +1,0 @@
-[ 12:30:20 ] [ INFO  ] Hello World!
-[ 12:30:20 ] [ OK    ] Hello Earth!
-[ 12:30:20 ] [ WARN  ] Hello Heaven!
-[ 12:30:20 ] [ ERROR ] Hello Hell!

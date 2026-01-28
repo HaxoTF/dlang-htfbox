@@ -7,6 +7,7 @@ It is meant for my personal use, but I hope it will help you too some day :3
 
 ### 📘 Manuals:
 - [ANSI](manual/ansi.md) - *communicate with the terminal using ANSI esc codes*
+- [CLI Parser](manual/cliparser.md) - parse args from `main()` function
 - [Logger](manual/logger.md) - *print debug info into the console & file*
 - Math (WIP) - *simple & complex mathematical operations*
 - [Rapid](manual/rapid.md) - *double-linked list*
