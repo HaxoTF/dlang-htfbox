@@ -1,3 +1,5 @@
+This project has been moved to [GitLab](https://gitlab.com/haxotf-code/libs/htfbox-dlang) due to trust issues to Microslop.
+
 # 🧰 HaxoTF's Toolbox (HTFBox)
 
 A simple general purpose toolbox written in dlang meant to make your developer's life way easier. <br>
